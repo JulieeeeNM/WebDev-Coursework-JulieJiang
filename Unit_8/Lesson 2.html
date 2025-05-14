@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Action for Global Goals</title>
+    <style>
+        /* Simple Global Styles with Box Model */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            background: #f0f8ff;
+        }
+        
+        /* Positioning Classes */
+        .relative {
+            position: relative;
+        }
+        
+        .absolute {
+            position: absolute;
+        }
+        
+        .fixed {
+            position: fixed;
+        }
+        
+        .sticky {
+            position: sticky;
+        }
+        
+        /* Header with Goal Colors */
+        .goal-header {
+            background: #26bde2; /* SDG blue */
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        /* Content Sections with Box Model */
+        .goal-section {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        /* Action Cards with Box Model */
+        .action-card {
+            border-left: 4px solid #26bde2;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            background: #f9f9f9;
+            border-radius: 0 4px 4px 0;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        
+        /* Floating elements */
+        .float-right {
+            float: right;
+            margin-left: 1rem;
+        }
+        
+        /* Simple Footer with Fixed Positioning */
+        .goal-footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        /* Notification badge with absolute positioning */
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ff5722;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        /* Sticky navigation example */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: #26bde2;
+            padding: 1rem;
+            z-index: 100;
+        }
+        
+        /* Box model demonstration */
+        .box-model-demo {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #26bde2;
+            margin: 30px auto;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky-nav">
+        <a href="#" style="color: white; margin-right: 1rem;">Home</a>
+        <a href="#" style="color: white; margin-right: 1rem;">Events</a>
+        <a href="#" style="color: white;">Contact</a>
+    </nav>
+    
+    <header class="goal-header">
+        <h1>Local Action for Global Goals</h1>
+        <p>SDG 6: Clean Water & Sanitation</p>
+        <div class="relative" style="display: inline-block;">
+            <span class="badge absolute">3</span>
+            <button>Upcoming Events</button>
+        </div>
+    </header>
+    
+    <main>
+        <section class="goal-section">
+            <h2>Our Community Projects</h2>
+            
+            <div class="action-card relative">
+                <span class="badge">New!</span>
+                <h3>Water Conservation Workshop</h3>
+                <p>June 15 | Community Center</p>
+                <p>Learn practical ways to reduce water waste at home.</p>
+                <div class="box-model-demo">
+                    <p>This demonstrates the box model with width, padding, border, and margin.</p>
+                </div>
+            </div>
+            
+            <div class="action-card">
+                <h3>River Cleanup Day</h3>
+                <img src="https://via.placeholder.com/150" alt="River" class="float-right">
+                <p>June 22 | Green Valley Park</p>
+                <p>Help protect our local water sources.</p>
+                <div style="clear: both;"></div>
+            </div>
+        </section>
+        
+        <div class="fixed" style="bottom: 20px; right: 20px; background: #26bde2; color: white; padding: 10px; border-radius: 50%;">
+            <a href="#" style="color: white; text-decoration: none;">↑</a>
+        </div>
+    </main>
+    
+    <footer class="goal-footer">
+        <p>Join us in making a difference | Contact: water@community.org</p>
+    </footer>
+</body>
+</html>

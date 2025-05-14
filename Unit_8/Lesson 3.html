@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Action for Global Goals</title>
+    <style>
+        /* Simple Global Styles with Box Model */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+            background: #f0f8ff;
+        }
+        
+        /* Display Property Classes */
+        .display-block {
+            display: block;
+        }
+        .display-inline {
+            display: inline;
+        }
+        .display-inline-block {
+            display: inline-block;
+        }
+        .display-flex {
+            display: flex;
+        }
+        .display-grid {
+            display: grid;
+        }
+        .display-none {
+            display: none;
+        }
+        
+        /* Positioning Classes */
+        .relative {
+            position: relative;
+        }
+        .absolute {
+            position: absolute;
+        }
+        .fixed {
+            position: fixed;
+        }
+        .sticky {
+            position: sticky;
+        }
+        
+        /* Header with Goal Colors */
+        .goal-header {
+            background: #26bde2;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        /* Content Sections with Box Model */
+        .goal-section {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #e0e0e0;
+        }
+        
+        /* Action Cards with Box Model */
+        .action-card {
+            border-left: 4px solid #26bde2;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            background: #f9f9f9;
+            border-radius: 0 4px 4px 0;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        
+        /* Floating elements */
+        .float-right {
+            float: right;
+            margin-left: 1rem;
+        }
+        
+        /* Simple Footer */
+        .goal-footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #333;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        /* Notification badge */
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ff5722;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        
+        /* Sticky navigation with flex display */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background: #26bde2;
+            padding: 1rem;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        /* Box model demonstration */
+        .box-model-demo {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #26bde2;
+            margin: 30px auto;
+            background: white;
+        }
+        
+        /* Grid layout for event cards */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        /* Flex container for header content */
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        /* Inline-block elements example */
+        .inline-block-example span {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            background: #26bde2;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            margin: 5px;
+        }
+        
+        /* Hidden element example */
+        .toggle-content {
+            display: none;
+        }
+        .toggle-content.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky-nav">
+        <a href="#" style="color: white;">Home</a>
+        <a href="#" style="color: white;">Events</a>
+        <a href="#" style="color: white;">Contact</a>
+    </nav>
+    
+    <header class="goal-header">
+        <div class="header-content">
+            <h1>Local Action for Global Goals</h1>
+            <p>SDG 6: Clean Water & Sanitation</p>
+            <div class="relative" style="display: inline-block;">
+                <span class="badge">3</span>
+                <button onclick="toggleEvents()">Upcoming Events</button>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section class="goal-section">
+            <h2>Our Community Projects</h2>
+            
+            <div class="action-card relative">
+                <span class="badge">New!</span>
+                <h3>Water Conservation Workshop</h3>
+                <p>June 15 | Community Center</p>
+                <p>Learn practical ways to reduce water waste at home.</p>
+                
+                <div class="box-model-demo">
+                    <p>This demonstrates the box model with width, padding, border, and margin.</p>
+                </div>
+                
+                <div class="inline-block-example">
+                    <h4>Inline-block Example:</h4>
+                    <span>Block 1</span>
+                    <span>Block 2</span>
+                    <span>Block 3</span>
+                </div>
+            </div>
+            
+            <div class="action-card">
+                <h3>River Cleanup Day</h3>
+                <img src="https://via.placeholder.com/150" alt="River" class="float-right">
+                <p>June 22 | Green Valley Park</p>
+                <p>Help protect our local water sources.</p>
+                <div style="clear: both;"></div>
+            </div>
+            
+            <div class="toggle-content" id="eventsContent">
+                <h3>All Upcoming Events</h3>
+                <div class="events-grid">
+                    <div class="action-card">
+                        <h4>Water Testing Workshop</h4>
+                        <p>June 18 | 10:00 AM</p>
+                    </div>
+                    <div class="action-card">
+                        <h4>Rainwater Harvesting</h4>
+                        <p>June 25 | 2:00 PM</p>
+                    </div>
+                    <div class="action-card">
+                        <h4>Community Well Maintenance</h4>
+                        <p>July 2 | 9:00 AM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="fixed" style="bottom: 20px; right: 20px; background: #26bde2; color: white; padding: 10px; border-radius: 50%;">
+            <a href="#" style="color: white; text-decoration: none;">↑</a>
+        </div>
+    </main>
+    
+    <footer class="goal-footer">
+        <p>Join us in making a difference | Contact: water@community.org</p>
+    </footer>
+
+    <script>
+        function toggleEvents() {
+            const content = document.getElementById('eventsContent');
+            content.classList.toggle('visible');
+        }
+    </script>
+</body>
+</html>
