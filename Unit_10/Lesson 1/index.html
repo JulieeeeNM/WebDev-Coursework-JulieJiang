@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>John Doe's Portfolio</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+    
+    <button class="menu-btn" id="menuBtn">☰ Menu</button>
+    <nav id="mainNav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <div class="main">
+            <div class="content">
+                <h2>Welcome to My Portfolio</h2>
+                <p>I'm a web developer specializing in responsive design and modern web applications.</p>
+                
+                <!-- Profile Image -->
+                <div class="profile-section">
+                    <img src="images/profile.jpg" alt="John Doe Profile Photo" class="profile-img">
+                    <p>This is my profile photo that scales appropriately on all devices.</p>
+                </div>
+                
+                <!-- Interactive Demo Section -->
+                <div class="interactive-demo">
+                    <h2>My Skills</h2>
+                    <p id="demoText">Click below to see my current focus:</p>
+                    <button class="btn" id="skillsBtn">Show Focus</button>
+                </div>
+                
+                <div class="gallery">
+                    <img src="images/placeholder-1.jpg" alt="Project 1">
+                    <img src="images/placeholder-2.jpg" alt="Project 2">
+                    <img src="images/placeholder-3.jpg" alt="Project 3">
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <h3>Latest Updates</h3>
+                <p>Currently working on a new responsive web design project.</p>
+                <p>Check back soon for updates!</p>
+                
+                <button class="btn" id="readMoreBtn">Read More</button>
+                <div class="hidden-content" id="hiddenContent">
+                    <p>I'm excited to announce that I'll be launching a new portfolio piece next month that showcases advanced CSS animations and JavaScript interactivity.</p>
+                    <p>This project will demonstrate my skills in creating engaging user experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 John Doe's Portfolio</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
